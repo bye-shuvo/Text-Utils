@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 function TextInput(props) {
+
   const [text, setText] = useState("");
   const TextChange = (event) => {
     const newText = event.target.value;
