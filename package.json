@@ -1,5 +1,5 @@
 {
-  "homepage": "https://myusername.github.io/my-app",
+  "homepage": "https://github.com/bye-shuvo/Text-Utils",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +17,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.2.0",
     "postcss-dir-pseudo-class": "^9.0.0",
     "postcss-pseudo-class-any-link": "^10.0.0",
     "react": "^18.3.1",
