@@ -63,7 +63,7 @@ function App() {
 
   return (
     <>
-    <><Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert}/><TextInput showAlert={showAlert} header = "Enter Text To Convert To Uppercase" mode={mode}/></>
+    <Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert}/><TextInput showAlert={showAlert} header = "Enter Text To Convert To Uppercase" mode={mode}/>
         {/* <RouterProvider router={router} /> */}
     </>
   );
