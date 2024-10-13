@@ -4,10 +4,10 @@ import Navbar from "./components/Navbar";
 import TextInput from "./components/TextInput";
 import Alert from "./components/Alert";
 import React, { useState } from "react";
-import {
-  createBrowserRouter,
-  RouterProvider
-} from "react-router-dom";
+// import {
+//   createBrowserRouter,
+//   RouterProvider
+// } from "react-router-dom";
 
 function App() {
   const [mode , setMode] = useState("light");
@@ -46,24 +46,25 @@ function App() {
     }
   }
 
-  const router = createBrowserRouter([
-    {
-      path : "/",
-      element :<><Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert}/><TextInput showAlert={showAlert} header = "Enter Text To Convert To Uppercase" mode={mode}/></>
-    },
-    {
-      path : "/home",
-      element :<><Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert}/><TextInput showAlert={showAlert} header = "Enter Text To Convert To Uppercase" mode={mode}/></>
-    },
-    {
-      path : "/about",
-      element : <><Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert} /><About title="About Us"/></>
-    }
-  ])
+  // const router = createBrowserRouter([
+  //   {
+  //     path : "/",
+  //     element :<><Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert}/><TextInput showAlert={showAlert} header = "Enter Text To Convert To Uppercase" mode={mode}/></>
+  //   },
+  //   {
+  //     path : "/home",
+  //     element :<><Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert}/><TextInput showAlert={showAlert} header = "Enter Text To Convert To Uppercase" mode={mode}/></>
+  //   },
+  //   {
+  //     path : "/about",
+  //     element : <><Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert} /><About title="About Us"/></>
+  //   }
+  // ])
 
   return (
     <>
-        <RouterProvider router={router} />
+    <><Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert}/><TextInput showAlert={showAlert} header = "Enter Text To Convert To Uppercase" mode={mode}/></>
+        {/* <RouterProvider router={router} /> */}
     </>
   );
 }
