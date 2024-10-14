@@ -66,8 +66,8 @@ function TextInput(props) {
       </div>
       <div className="container my-3">
         <h2>Text Summary</h2>
-        <p>{text.trim().split(' ') == "" ? 0 : text.trim().split(' ').length} Word , {text.trim().length} Letters , {text.length} Characters , {text.toLowerCase().match(/[aeiou]/g) == null ? 0 : text.toLowerCase().match(/[aeiou]/g).length} vowels , {text.toLowerCase().match(/[bcdfghjklmnpqrstvwxyz]/g) == null ? 0 : text.toLowerCase().match(/[bcdfghjklmnpqrstvwxyz]/g).length} consonants</p>
-        <p>{0.008 * (text.trim().split(' ') == "" ? 0 : text.trim().split(' ').length)} Minutes Read</p>
+        <p>{text.trim().split(/\s+/) == "" ? 0 : text.trim().split(/\s+/).length} Word , {text.trim().length} Letters , {text.length} Characters , {text.toLowerCase().match(/[aeiou]/g) == null ? 0 : text.toLowerCase().match(/[aeiou]/g).length} vowels , {text.toLowerCase().match(/[bcdfghjklmnpqrstvwxyz]/g) == null ? 0 : text.toLowerCase().match(/[bcdfghjklmnpqrstvwxyz]/g).length} consonants</p>
+        <p>{0.008 * (text.trim().split(/\s+/) == "" ? 0 : text.trim().split(/\s+/).length)} Minutes Read</p>
         <h2>Preview</h2>
         <p>{text === "" ? "Nothing to Preview" : text}</p>
       </div>
