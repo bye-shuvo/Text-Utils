@@ -47,7 +47,7 @@ function TextInput(props) {
   return (
     <>
       <div className="mb-3 container">
-        <h1>{props.header}</h1>
+        <h1 className="my-2">{props.header}</h1>
         <textarea
           className="form-control"
           id="exampleFormControlTextarea1"
@@ -57,12 +57,12 @@ function TextInput(props) {
           onChange={TextChange}
           style={{backgroundColor : props.mode === "light" ? "white" : "rgb(48 60 71)" , color : props.mode === "light" ? "black" : "white"}}
         ></textarea>
-         <button className="btn btn-primary my-3 mx-2" onClick={TextToUpperCase}>Convert to UpperCase</button>
-         <button className="btn btn-primary my-3 mx-2" onClick={TextToLowerCase}>Convert to lowerCase</button>
-         <button className="btn btn-primary my-3 mx-2" onClick={TextToCapitalizedCase}>Convert to CapitalizedCase</button>
-         <button className="btn btn-primary my-3 mx-2" onClick={ClearText}>Clear Text</button>
-         <button className="btn btn-primary my-3 mx-2" onClick={CopyText}>Copy Text</button>
-         <button className="btn btn-primary my-3 mx-2" onClick={RemoveExtraSpace}>Remove Extra Space</button>
+         <button disabled={text.length === 0} className="btn btn-primary my-2 mx-2" onClick={TextToUpperCase}>Convert to UpperCase</button>
+         <button disabled={text.length === 0} className="btn btn-primary my-2 mx-2" onClick={TextToLowerCase}>Convert to lowerCase</button>
+         <button disabled={text.length === 0} className="btn btn-primary my-2 mx-2" onClick={TextToCapitalizedCase}>Convert to CapitalizedCase</button>
+         <button disabled={text.length === 0} className="btn btn-primary my-2 mx-2" onClick={ClearText}>Clear Text</button>
+         <button disabled={text.length === 0} className="btn btn-primary my-2 mx-2" onClick={CopyText}>Copy Text</button>
+         <button disabled={text.length === 0} className="btn btn-primary my-2 mx-2" onClick={RemoveExtraSpace}>Remove Extra Space</button>
       </div>
       <div className="container my-3">
         <h2>Text Summary</h2>

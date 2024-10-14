@@ -1,5 +1,5 @@
 import "./App.css";
-// import About from "./components/About";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextInput from "./components/TextInput";
 import Alert from "./components/Alert";
@@ -12,6 +12,10 @@ import React, { useState } from "react";
 function App() {
   const [mode , setMode] = useState("light");
   const [alert , setAlert] = useState(null);
+  const [newStyle , setNewStyle] = useState({
+        color : 'black',
+        backgroundColor : 'white'
+    });
 
   const showAlert = (massage , type)=>{
     setAlert({
@@ -31,8 +35,12 @@ function App() {
       showAlert("Dark Mode Enabled" , "success");
       document.title = "TextUtils - Dark Mode";
       setTimeout(()=>{
-        document.title = "TextUtils - Home";
+        document.title = "TextUtils - Free Online Text Manipulation Tool | Word Count, Case Conversion, Remove Extra Spaces";
       },2500)
+      setNewStyle({
+        color: "white",
+        backgroundColor: "rgb(41, 45, 62)" 
+      })
     }
     else{
       setMode("light");
@@ -41,10 +49,15 @@ function App() {
       showAlert("Light Mode Enabled" , "success");
       document.title = "TextUtils - Light Mode";
       setTimeout(()=>{
-        document.title = "TextUtils - Home";
+        document.title = "TextUtils - Free Online Text Manipulation Tool | Word Count, Case Conversion, Remove Extra Spaces";
       },2500)
+      setNewStyle({
+        color: "black",
+        backgroundColor: "white"
+      })
     }
   }
+
 
   // const router = createBrowserRouter([
   //   {
@@ -63,7 +76,8 @@ function App() {
 
   return (
     <>
-    <Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert}/><TextInput showAlert={showAlert} header = "Enter Text To Convert To Uppercase" mode={mode}/>
+    <Navbar title="Bye_TextEditor" aboutHome="Home" mode={mode} toggleMode={toggleMode}/><Alert alert = {alert}/><TextInput showAlert={showAlert} header = "Try TextUtils - Text Editor for Word Count, Case Conversion, and Formatting" mode={mode}/>
+    <About title="About Us" newStyle={newStyle}/>
         {/* <RouterProvider router={router} /> */}
     </>
   );
